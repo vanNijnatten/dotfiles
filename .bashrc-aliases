@@ -1,0 +1,7 @@
+
+alias ytdl='youtube-dl -f bestvideo+bestaudio'
+
+alias gt='vim ~/.GeekToolText.txt'
+alias gt2='vim ~/.GeekToolText_2.txt'
+
+
