@@ -9,6 +9,8 @@ set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 " Make tabs as wide as two spaces
 set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
@@ -16,11 +18,12 @@ set list
 set hlsearch
 " Ignore case of searches
 set ignorecase
+set smartcase
 " Highlight dynamically as pattern is typed
 set incsearch
 " Always show status line
 set laststatus=2
- Disable error bells
+" Disable error bells
 set noerrorbells
 " Show the cursor position
 set ruler
@@ -28,8 +31,15 @@ set ruler
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
+set cmdheight=2
+
 
 
 syntax on
-set rnu
+set number relativenumber
+set splitright
+set cursorline
+set wrap
+
+
 
