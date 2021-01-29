@@ -1,0 +1,11 @@
+# brew install zsh-syntax-highlighting
+# brew install zsh-autosuggestions
+# brew install zsh-history-substring-search
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+
+
+

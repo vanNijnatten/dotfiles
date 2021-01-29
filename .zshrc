@@ -75,7 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,11 +109,14 @@ source $ZSH/oh-my-zsh.sh
 test -e "${HOME}/.p10k.zsh" && . "${HOME}/.p10k.zsh"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && . "${HOME}/.iterm2_shell_integration.zsh"
 
+bindkey -v # vim-style editing
+
+test -e "${HOME}/.zshrc-plugins" && . "${HOME}/.zshrc-plugins"
 test -e "${HOME}/.bashrc-path" && . "${HOME}/.bashrc-path"
 test -e "${HOME}/.bashrc-perl" && . "${HOME}/.bashrc-perl"
 test -e "${HOME}/.bashrc-conda" && . "${HOME}/.bashrc-conda"
-test -e "${HOME}/.bashrc-functions" && . "${HOME}/.bashrc-functions"
 test -e "${HOME}/.bashrc-umcg" && . "${HOME}/.bashrc-umcg"
-test -e "${HOME}/.bashrc-customize" && . "${HOME}/.bashrc-customize"
+test -e "${HOME}/.bashrc-aliases" && . "${HOME}/.bashrc-aliases"
+test -e "${HOME}/.bashrc-functions" && . "${HOME}/.bashrc-functions"
 
 
