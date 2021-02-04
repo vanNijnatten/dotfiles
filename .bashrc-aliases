@@ -1,7 +1,15 @@
-
+alias R="R -q"
 alias ytdl='youtube-dl -f bestvideo+bestaudio'
 
 alias gt='vim ~/.GeekToolText.txt'
 alias gt2='vim ~/.GeekToolText_2.txt'
+alias es='trans -brief -s es -t en '
+
+
+alias beep='echo -ne "\007"'
+
+
+alias cdgh='cd ~/Documents/Private/GitHub/'
+
 
 
