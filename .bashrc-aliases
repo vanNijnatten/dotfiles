@@ -3,8 +3,9 @@ alias ytdl='youtube-dl -f bestvideo+bestaudio'
 
 alias gt='vim ~/.GeekToolText.txt'
 alias gt2='vim ~/.GeekToolText_2.txt'
-alias es='trans -brief -s es -t en '
 
+alias esen='trans -brief -s es -t en '
+alias enes='trans -brief -s en -t es '
 
 alias beep='echo -ne "\007"'
 
