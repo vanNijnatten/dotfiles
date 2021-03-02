@@ -72,5 +72,9 @@ bindkey -s '^o' 'lfcd\n'
 
 # Find unique in files
 function findu() {
-	find . -type f -iname "$1" -print0 | xargs -0 grep -ohi "\w*$2*\w*" | sort | uniq
+	if [ $# -eq 2 ]; then
+		find . -type f -iname "$1" -print0 | xargs -0 grep -ohi "\w*$2*\w*" | sort | uniq
+	else
+		echo "Need two parameters: 1) file mask for 'find' (e.g. '*.R') and 2) text to search (e.g. 'limma::')"
+	fi
 }
