@@ -67,6 +67,10 @@ function lfcd() {
 		[ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
 	fi
 }
+bindkey -s '^o' 'lfcd\n'
 
 
-
+# Find unique in files
+function findu() {
+	find . -type f -iname "$1" -print0 | xargs -0 grep -ohi "\w*$2*\w*" | sort | uniq
+}
