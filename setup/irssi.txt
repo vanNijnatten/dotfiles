@@ -1,0 +1,26 @@
+/server add -auto -network fn irc.freenode.net
+
+/NETWORK ADD -autosendcmd "/^msg NickServ IDENTIFY vannijnatten passwrd;wait 2000;" fn
+
+/channel add -auto #R fn
+/channel add -auto #rstudio fn
+/channel add -auto ##statistics fn
+/channel add -auto ##biology fn
+/channel add -auto #bioinformatics fn
+
+/channel add -auto ##math fn
+/channel add -auto ##learnanylanguage fn
+/channel add -auto ##machinelearning fn
+/channel add -auto ##medicine fn
+/channel add -auto ##science fn
+
+
+/run scriptassist
+/script install adv_windowlist
+/script install trackbar
+/script install "Nick Color"
+/script install 
+
+/script autorun adv_windowlist
+/script autorun trackbar
+/script autorun "Nick Color"

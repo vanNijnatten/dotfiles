@@ -1,5 +1,6 @@
 alias R="R -q"
 alias ytdl='youtube-dl -f bestvideo+bestaudio'
+alias irc='irssi'
 
 alias gt='vim ~/.GeekToolText.txt'
 alias gt2='vim ~/.GeekToolText_2.txt'
