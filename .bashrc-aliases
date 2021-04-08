@@ -1,9 +1,9 @@
 alias R="R -q"
+alias irc="irssi"
 alias ytdl='youtube-dl -f bestvideo+bestaudio'
-alias irc='irssi'
+alias lsattr='ls -al@'
 
-alias gt='vim ~/.GeekToolText.txt'
-alias gt2='vim ~/.GeekToolText_2.txt'
+alias todo='vim ~/.todo.txt'
 
 alias esen='trans -brief -s es -t en '
 alias enes='trans -brief -s en -t es '
