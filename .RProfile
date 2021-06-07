@@ -9,6 +9,9 @@ options(stringsAsFactors=FALSE)
 options("digits.secs"=3)  # show sub-second time stamps
 options(instal.packages.compile.from.source = "no")
 
+Sys.setenv(LANG = "en")
+Sys.setenv(R_INSTALL_STAGED = FALSE)
+
 # .libPaths( c( "~/userLibrary" , .libPaths() ) )
 formals(quit)$save <- formals(q)$save <- "no"
 
