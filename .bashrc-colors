@@ -1,0 +1,90 @@
+
+function blink() {
+	for bar in "$@"
+	do
+		printf "\e[5m%s " "${bar}"
+	done
+	printf "\n"
+}
+
+function red() {
+	for bar in "$@"
+	do
+		printf "\e[31m%s " "${bar}"
+	done
+	printf "\n"
+}
+
+function green() {
+	for bar in "$@"
+	do
+		printf "\e[32m%s " "${bar}"
+	done
+	printf "\n"
+}
+
+function yellow() {
+	for bar in "$@"
+	do
+		printf "\e[33m%s " "${bar}"
+	done
+	printf "\n"
+}
+
+function blue() {
+	for bar in "$@"
+	do
+		printf "\e[34m%s " "${bar}"
+	done
+	printf "\n"
+}
+
+
+function bgred() {
+	for bar in "$@"
+	do
+		printf "\e[41m%s " "${bar}"
+	done
+	printf "\n"
+}
+
+function bggreen() {
+	for bar in "$@"
+	do
+		printf "\e[42m%s " "${bar}"
+	done
+	printf "\n"
+}
+
+function bgyellow() {
+	for bar in "$@"
+	do
+		printf "\e[43m%s " "${bar}"
+	done
+	printf "\n"
+}
+
+function bgblue() {
+	for bar in "$@"
+	do
+		printf "\e[44m%s " "${bar}"
+	done
+	printf "\n"
+}
+
+function bold() {
+	for bar in "$@"
+	do
+		printf "\e[im%s " "${bar}"
+	done
+	printf "\n"
+}
+
+function printcolors() {
+	for i in $(seq 0 255); do
+		printf "\e[38;5;${i}m $i "
+	done
+}
+
+
+
