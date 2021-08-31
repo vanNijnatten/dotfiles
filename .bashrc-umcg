@@ -1,4 +1,3 @@
-
 alias calculon='ssh -A lobby+calculon'
 alias boxy='ssh -A lobby+boxy'
 alias gearshift='ssh -A airlock+gearshift'
@@ -6,5 +5,10 @@ alias gearshift='ssh -A airlock+gearshift'
 alias ftp_='sftp -P 22 umcg-jvnijnatten@cher-ami.hpc.rug.nl'
 
 # scp ~/.vimrc lobby+calculon:/home/umcg-jvnijnatten/.vimrc
+
+
+
+
+
 
 

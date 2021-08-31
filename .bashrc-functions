@@ -78,3 +78,52 @@ function findu() {
 		echo "Need two parameters: 1) file mask for 'find' (e.g. '*.R') and 2) text to search (e.g. 'limma::')"
 	fi
 }
+
+#WEBSITEDIR="${HOME}/Documents/Private/GitHub/vanNijnatten.dev"
+function bpost() {
+	if [ $# -eq 0 ]; then
+		echo "Enter the name of the note as the argument"
+	else	
+		TITLE="$@"
+		AUTHOR="`whoami`"
+		DATE=`date +"%Y-%m-%d %H:%M"`
+		EXT="md"
+		PREPEND="`date +%Y-%m-%d`-"
+		SLUG=$(echo -n "${TITLE}" | sed -e 's/[^[:alnum:]]/-/g' | tr -s '-' | tr A-Z a-z)
+		FILE="${WEBSITEDIR}/_posts/${PREPEND}${SLUG}.${EXT}"
+		if [[ "${TITLE:0:1}" == "2" ]]; then
+			TITLE=${TITLE:11};
+		fi
+		
+		if [[ ! -f "$FILE" ]]; then
+			echo -e "---\nlayout: post\ntitle:  \"${TITLE}\"\nauthor: \"${AUTHOR}\"\ndate:   ${DATE}\ncategories: blog\ntags:   blog technique\n---\n\n**$@**\n" > "$FILE"
+		fi
+		
+		vim -c 'startinsert' "${FILE}"
+	fi
+}
+
+# Open GitHub directory
+function gh() {
+  select item in $(cdgh; find . -mindepth 1 -maxdepth 1 -type d | sort);
+  do
+    open "$GITHUBDIR/$item" -a Atom.app
+    break
+  done
+}
+
+# Pull every repository in the gitHub directory
+function ghpull() {
+	pushd "$GITHUBDIR" > /dev/null
+	for DIR in */; do
+		pushd "$DIR"
+		if [ -d ".git" ] && [ -n "$(ls -A .git)" ]; then
+			git config pull.ff only
+			git pull
+		fi
+		popd > /dev/null
+	done
+	popd > /dev/null
+}
+
+

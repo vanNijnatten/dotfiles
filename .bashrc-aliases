@@ -11,7 +11,8 @@ alias enes='trans -brief -s en -t es '
 alias beep='echo -ne "\007"'
 
 
-alias cdgh='cd ~/Documents/Private/GitHub/'
-
-
+GITHUBDIR="${HOME}/Documents/Private/GitHub"
+WEBSITEDIR="${GITHUBDIR}/vanNijnatten.dev"
+alias cdgh="cd ${GITHUBDIR}"
+alias cdws="cd ${WEBSITEDIR}"
 
