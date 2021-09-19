@@ -1,6 +1,10 @@
 alias calculon='ssh -A lobby+calculon'
-alias boxy='ssh -A lobby+boxy'
+alias mntcalculon='mkdir ~/calculon; sshfs lobby+calculon:/groups/umcg-griac/tmp04/projects/umcg-jvnijnatten ~/calculon'
+alias umntcalculon='diskutil unmount force ~/calculon'
+
 alias gearshift='ssh -A airlock+gearshift'
+alias mntgearshift='mkdir ~/gearshift; sshfs airlock+gearshift:/groups/umcg-griac/tmp01/projects/umcg-jvnijnatten ~/gearshift'
+alias umntgearshift='diskutil unmount force ~/gearshift'
 
 alias ftp_='sftp -P 22 umcg-jvnijnatten@cher-ami.hpc.rug.nl'
 
