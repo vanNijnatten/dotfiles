@@ -8,6 +8,7 @@ options(stringsAsFactors=FALSE)
 #options("width"=160)      # wide display with multiple monitors
 options("digits.secs"=3)  # show sub-second time stamps
 options(instal.packages.compile.from.source = "no")
+#options(error = function() traceback(3))
 
 Sys.setenv(LANG = "en")
 Sys.setenv(R_INSTALL_STAGED = FALSE)
@@ -25,4 +26,3 @@ ls.packages <- function() {
 	ip = ip[is.na(ip$Priority),1:2,drop=FALSE]
 	ip
 }
-
