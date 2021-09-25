@@ -2,7 +2,7 @@
 
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew bundle --file=$(pwd)/Brewfile
+brew bundle --file=$(pwd)/Brewfile # created with 'brew bundle dump'
 
 
 
