@@ -106,6 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+setopt histignorespace
+
 test -e "${HOME}/.p10k.zsh" && . "${HOME}/.p10k.zsh"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && . "${HOME}/.iterm2_shell_integration.zsh"
 
