@@ -1,24 +1,21 @@
-r <- getOption("repos")
-r["CRAN"] <- "https://cloud.r-project.org/"
-options(repos = r)
-rm(r)
-
-options(prompt="R> ", digits=4, show.signif.stars=FALSE)
-options(stringsAsFactors=FALSE)
-#options("width"=160)      # wide display with multiple monitors
-options("digits.secs"=3)  # show sub-second time stamps
-options(instal.packages.compile.from.source = "no")
-#options(error = function() traceback(3))
-
 Sys.setenv(LANG = "en")
 Sys.setenv(R_INSTALL_STAGED = FALSE)
 
+options(
+	prompt="R> ",
+	digits=4,
+	digits.secs=3, # show sub-second time stamps
+	#width=160, # wide display with multiple monitors
+	stringsAsFactors=FALSE,
+	show.signif.stars=FALSE,
+	#error = function() traceback(3), # print traceback right after an error
+	repos = c(CRAN = "https://cloud.r-project.org/"),
+	instal.packages.compile.from.source = "no"
+)
+
+
 # .libPaths( c( "~/userLibrary" , .libPaths() ) )
 formals(quit)$save <- formals(q)$save <- "no"
-
-# options("tenwise_api"="AGB34!yTP2")
-
-
 
 
 ls.packages <- function() {
