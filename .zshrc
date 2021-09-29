@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/vannijnatten/.oh-my-zsh"
+export ZSH="/Users/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -131,8 +131,3 @@ test -e "${HOME}/.bashrc-functions" && . "${HOME}/.bashrc-functions"
 #diskutil unmountDisk /dev/diskN
 #sudo dd if=/path/to/downloaded.iso of=/dev/rdiskN bs=1m
 #diskutil eject /dev/diskN
-
-
-
-
-
