@@ -1,3 +1,8 @@
+# Set the locale:
+# defaults write org.R-project.R force.LANG en_US.UTF-8 # Mac
+# export LANG=en_US.UTF-8 # Linux/Mac
+# export LC_ALL=en_US.UTF-8 # Linux/Mac
+
 Sys.setenv(LANG = "en")
 Sys.setenv(R_INSTALL_STAGED = FALSE)
 
