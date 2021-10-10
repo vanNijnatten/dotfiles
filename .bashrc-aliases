@@ -3,15 +3,16 @@ alias irc="irssi"
 alias ytdl='youtube-dl -f bestvideo+bestaudio'
 alias lsattr='ls -al@'
 
-alias todo='vim ~/.todo.txt'
+alias todo='vim ~/.todo.sh'
 
 alias esen='trans -brief -s es -t en '
 alias enes='trans -brief -s en -t es '
 
 alias beep='echo -ne "\007"'
+alias github="$(which gh)"
+alias lintr='find . -type f -iname "*.r" -print0 | parallel -0 Rscript -e \""lintr::lint('"'{}'"')\""'
 
-
-GITHUBDIR="${HOME}/Documents/Private/GitHub"
+GITHUBDIR="${HOME}/GitHub"
 WEBSITEDIR="${GITHUBDIR}/vanNijnatten.dev"
 alias cdgh="cd ${GITHUBDIR}"
 alias cdws="cd ${WEBSITEDIR}"
