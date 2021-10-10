@@ -10,7 +10,7 @@ alias enes='trans -brief -s en -t es '
 
 alias beep='echo -ne "\007"'
 alias github="$(which gh)"
-alias lintr='find . -type f -iname "*.r" -print0 | parallel -0 Rscript -e \""lintr::lint('"'{}'"')\""'
+alias lintr='find . -type f -iname "*.r" -print0 | parallel -0 Rscript -e \""lintr::lint('"'{=1 uq(); =}'"')\""'
 
 GITHUBDIR="${HOME}/GitHub"
 WEBSITEDIR="${GITHUBDIR}/vanNijnatten.dev"
