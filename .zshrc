@@ -117,7 +117,6 @@ bindkey -v # vim-style editing
 
 test -e "${HOME}/.zshrc-plugins" && . "${HOME}/.zshrc-plugins"
 test -e "${HOME}/.bashrc-path" && . "${HOME}/.bashrc-path"
-test -e "${HOME}/.bashrc-perl" && . "${HOME}/.bashrc-perl"
 test -e "${HOME}/.bashrc-conda" && . "${HOME}/.bashrc-conda"
 test -e "${HOME}/.bashrc-colors" && . "${HOME}/.bashrc-colors"
 test -e "${HOME}/.bashrc-umcg" && . "${HOME}/.bashrc-umcg"
