@@ -83,7 +83,7 @@ function findu() {
 function bpost() {
 	if [ $# -eq 0 ]; then
 		echo "Enter the name of the note as the argument"
-	else	
+	else
 		TITLE="$@"
 		AUTHOR="`whoami`"
 		DATE=`date +"%Y-%m-%d %H:%M"`
@@ -105,11 +105,18 @@ function bpost() {
 
 # Open GitHub directory
 function gh() {
-  select item in $(cdgh; find . -mindepth 1 -maxdepth 1 -type d | sort);
-  do
-    open "$GITHUBDIR/$item" -a Atom.app
-    break
-  done
+	select item in $(
+		cdgh;
+		find . ./creative ./forks ./gists -mindepth 1 -maxdepth 1 -type d \
+			-not -iname "creative" -and \
+			-not -iname "forks" -and \
+			-not -iname "gists" \
+			| sort
+	);
+	do
+		open "$GITHUBDIR/$item" -a Atom.app
+		break
+	done
 }
 
 # Pull every repository in the gitHub directory
@@ -126,4 +133,8 @@ function ghpull() {
 	popd > /dev/null
 }
 
+# Make a tree from the current directory
+function tree() {
+	find . | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"
+}
 
