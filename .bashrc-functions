@@ -105,14 +105,7 @@ function bpost() {
 
 # Open GitHub directory
 function gh() {
-	select item in $(
-		cdgh;
-		find . ./creative ./forks ./gists -mindepth 1 -maxdepth 1 -type d \
-			-not -iname "creative" -and \
-			-not -iname "forks" -and \
-			-not -iname "gists" \
-			| sort
-	);
+	select item in $(cdgh; find . -mindepth 1 -type d -iname ".git" | sed -e "s/\/\.git$//g" | sort);
 	do
 		open "$GITHUBDIR/$item" -a Atom.app
 		break
