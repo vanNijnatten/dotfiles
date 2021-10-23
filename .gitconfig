@@ -1,3 +1,10 @@
+[user]
+	signingKey = 2F01902897288144
+	email = 9002122+vanNijnatten@users.noreply.github.com
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
 [alias]
 	lg = lg1
 	lg1 = lg1-specific --all
