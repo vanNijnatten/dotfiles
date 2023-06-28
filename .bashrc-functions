@@ -164,3 +164,11 @@ function tree() {
 	find . | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"
 }
 
+# Sync files in current directory to an online directory
+# brew install fswatch
+function cfswatch() {
+	fswatch . |
+		while read file; do
+			scp -r "${file/$(pwd)/.}" "airlock+gearshift:/groups/umcg-griac/tmp01/projects/umcg-jvnijnatten/$(dirname "${file/$(pwd)/.}")" ;
+		done
+}
